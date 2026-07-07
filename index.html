@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VTV-AMR: Visualization of Time-Varying Adaptive Mesh Refinement Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
+    <script>
+        function setupPage() {
+            var pageid = queryGET("pageid");
+            if (!pageid)
+                pageid = "home";
+
+            document.getElementById(pageid + "main").style.display = "block"
+
+            // if (!isMobileBrowser())
+            // {
+            //     document.getElementById("mob_" + pageid).className = "active";
+            //     document.getElementById("topnavdesktop").style.display = "none";
+            //     document.getElementById("footer").style.width = "480px";
+            // }
+            // else
+            // {
+            //     document.getElementById(pageid).className = "active";
+            //     document.getElementById("topnavmobile").style.display = "none";
+            // }
+            document.getElementById(pageid).className = "active";
+            document.getElementById("topnavmobile").style.display = "none";
+
+        }
+
+    </script>
+</head>
+
+<body onload="setupPage()">
+
+    <!--<div class="mobile-container">-->
+
+    <!-- desktop navigation -->
+<div class="topnav" id="topnavdesktop" style="display: block">
+  <a href="index.html?pageid=home" id="home">Home</a>
+  <a href="index.html?pageid=abt_" id="abt_">About</a>
+</div>
+
+
+<div class="sidebar" style="text-align: left">
+  <img src="img/teaser.jpg" style="width: 400px" />
+  <br />
+  <br />
+  <div class="profilename">
+      Advanced Real-Time Volume Graphics
+  </div>
+
+  <div class="profiledescr">
+      <i>SIGGRAPH 2026 Courses</i><br />
+      <br />
+      Stefan Zellmann<br />
+      Alper Sahistan<br />
+      Ingo Wald<br />
+  </div>
+
+  <div style="margin-top: 10px; font-size: 16px">
+      <a href="https://doi.org/10.1145/3799820.3812500">
+          Official Course Material (ACM digital library)
+      </a>
+  </div>
+</div>
+
+<!-- main area -->
+<div class="mainarea" id="homemain">
+  <div class="title2">
+    Home
+  </div>
+  <div class="text">
+    On this website we provide additional and updated material to the course
+    on <i>Advanced Real-Time Volume Graphics</i> that was originally held at
+    SIGGRAPH'26.
+    <br />
+    <br />
+    <div class="title3">Slide decks</div>
+    <a href="https://docs.google.com/presentation/d/1c4upxcB7vq-BITS0Q9aq6BEY8aYn9r_u4pj8ONInx50/edit?usp=sharing">Google slides, version submitted to SIGGRAPH'26</a>
+    <br />
+    <a href="https://docs.google.com/presentation/d/12polIQvP06SvvnEhluCBHZAYrwRa2J3RjK5nYFNCJXA/edit?usp=sharing">Google slides, updated version</a>
+    <br />
+    <br />
+    <div class="title3">Samples</div>
+    <a href="https://github.com/dvr-course/dvr-course-cpp">CUDA/C++ sample code framework on GitHub.com</a>
+    <br />
+    <a href="https://github.com/dvr-course/dvr-course-data">Data sets</a>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+</div>
+
+<div class="mainarea" id="abt_main">
+  <div class="title2">
+    About
+  </div>
+    <!--</div>  mobile container -->
+</div>
+
+</body>
+
+</html>
